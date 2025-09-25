@@ -86,7 +86,7 @@ void registerUser() {
     cout << "Enter your name: ";
     getline(cin, newUser.name);
 
-    newUser.phoneNum = getIntInput("Enter phone number: ", 1000, 999999999);
+    newUser.phoneNum = getIntInput("Enter phone number: ", 1000, 99999999999);
 
     newUser.balance = getDoubleInput("Enter starting balance (RM): ", 0.0);
 
@@ -100,7 +100,7 @@ void loginUser() {
         return;
     }
 
-    int phone = getIntInput("Enter phone number to login: ", 1000, 999999999);
+    int phone = getIntInput("Enter phone number to login: ", 1000, 99999999999);
 
     for (auto &user : users) {
         if (user.phoneNum == phone) {

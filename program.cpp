@@ -25,7 +25,7 @@ vector<User> users;
 User* currentUser = nullptr;
 int nextTransactionId = 1000;
 
-// Safe input functions
+//phone num func
 int getIntInput(string prompt, int min, int max) {
     int value;
     while (true) {
@@ -40,6 +40,7 @@ int getIntInput(string prompt, int min, int max) {
     }
 }
 
+//money amount
 double getDoubleInput(string prompt, double min = 0) {
     double value;
     while (true) {
@@ -48,7 +49,7 @@ double getDoubleInput(string prompt, double min = 0) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return value;
         }
-        cout << "Invalid input. Please enter a number >= " << min << "." << endl;
+        cout << "Invalid input. Please enter an amount more than RM" << min << ".00" << endl;
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }

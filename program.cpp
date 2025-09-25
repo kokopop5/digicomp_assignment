@@ -25,7 +25,7 @@ vector<User> users;
 User* currentUser = nullptr;
 int nextTransactionId = 1000;
 
-/// 🔹 Safe input functions
+// Safe input functions
 int getIntInput(string prompt, int min, int max) {
     int value;
     while (true) {
@@ -66,7 +66,7 @@ void topUp();
 void loginMenu() {
     int choice;
     do {
-        cout << "========== E-Wallet ==========" << endl;
+        cout << "========== Welcome to Touch N GO! ==========" << endl << endl;
         cout << "1. Register New User" << endl;
         cout << "2. Login Existing User" << endl;
         cout << "0. Exit" << endl;
@@ -121,8 +121,10 @@ void logoutUser() {
 void menuDisplay() {
     int choice;
     do {
-        cout << "--------------------------------" << endl;
-        cout << "           E-Wallet             " << endl;
+        cout << "================================" << endl;
+        cout << "=          E-Wallet            =" << endl;
+        cout << "=         Touch N Go           =" << endl;
+        cout << "================================" << endl << endl;
         cout << "User: " << currentUser->name << endl;
         cout << "Balance: RM" << fixed << setprecision(2) << currentUser->balance << endl;
         cout << "--------------------------------" << endl;
